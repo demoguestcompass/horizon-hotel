@@ -153,14 +153,6 @@ textarea.fb-field{resize:vertical;min-height:90px}
 .footer li a:hover{color:var(--gold)}
 .footer__bottom{max-width:1120px;margin:32px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.78rem}
 
-/* ============ FLOATING CHAT BUTTON ============ */
-.gc-float{position:fixed;bottom:24px;right:24px;z-index:999;display:flex;align-items:center;gap:0;filter:drop-shadow(0 4px 16px rgba(0,0,0,.18));animation:gcPulse 3s ease-in-out infinite}
-@keyframes gcPulse{0%,100%{filter:drop-shadow(0 4px 16px rgba(0,0,0,.18))}50%{filter:drop-shadow(0 4px 24px rgba(26,111,181,.35))}}
-.gc-float__btn{display:flex;align-items:center;gap:10px;background:var(--blue);color:var(--white);padding:14px 22px 14px 18px;border-radius:50px;font-family:'Inter',sans-serif;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .25s;border:none;cursor:pointer}
-.gc-float__btn:hover{background:var(--navy);transform:translateY(-2px)}
-.gc-float__btn svg{width:22px;height:22px;fill:var(--white);flex-shrink:0}
-.gc-float__pulse{position:absolute;top:-2px;right:-2px;width:12px;height:12px;background:#4ade80;border-radius:50%;border:2px solid var(--white)}
-
 /* ============ RESPONSIVE ============ */
 @media(max-width:1024px){
   .about__grid{grid-template-columns:1fr;gap:36px}
@@ -404,13 +396,7 @@ body{padding-top:36px}
 </footer>
 
 <!-- ======= FLOATING GUESTCOMPASS BUTTON ======= -->
-<a href="https://horizonhotel.guestinfo.com/NL?_ca=1" target="_blank" rel="noopener" class="gc-float" title="Praat met onze digitale assistent">
-  <span class="gc-float__btn">
-    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
-    <span>Praat met onze digitale assistent</span>
-  </span>
-  <span class="gc-float__pulse"></span>
-</a>
+
 
 <!-- Mews BookingEngine -->
 <script>(function(m,e,w,s){c=m.createElement(e);c.onload=function(){Mews.D.apply(null,s)};c.async=1;c.src=w;t=m.getElementsByTagName(e)[0];t.parentNode.insertBefore(c,t);})(document,'script','https://app.mews-demo.com/distributor/distributor.min.js',[['b2d3796c-0cbf-4abf-bc70-b3a2009f1198'],'https://app.mews-demo.com']);</script>
@@ -421,7 +407,7 @@ body{padding-top:36px}
     window.GuestCompassConfig = {
       hotelName: "Horizon Hotel",
       color: "#F97316",
-      assistantUrl: "https://demoguestcompass.github.io/ai-assistant/"
+      assistantUrl: "https://horizonhotel.guestinfo.com/NL?_ca=1"
     };
   </script>
   <script src="https://demoguestcompass.github.io/ai-assistant/widget.js"></script>
