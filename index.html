@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horizon Hotel | OfficiÃ«le Website</title>
-<meta name="description" content="Boek uw verblijf bij Horizon Hotel. Geniet van comfort, natuur en gastvrijheid in het hart van Nederland.">
+<title>Horizon Hotel | Offici&euml;le Website</title>
+<meta name="description" content="Boek uw verblijf bij Horizon Hotel in Bloemendaal. Comfort, duinen en zee, op vijf minuten fietsen van het strand. Zeeweg 712, 2041 MR Bloemendaal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -173,6 +173,37 @@ textarea.fb-field{resize:vertical;min-height:90px}
   .gc-float__btn{padding:16px}
 }
 
+/* ============ PRAKTISCHE INFORMATIE ============ */
+.info{background:var(--sand)}
+.info__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.info-card{background:var(--white);border-radius:var(--radius);padding:24px 24px 22px;box-shadow:var(--shadow)}
+.info-card h3{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.info-card h3 i{font-style:normal;font-size:1.15rem}
+.info-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:8px 0;border-top:1px solid #efece4;font-size:.84rem;line-height:1.5}
+.info-row:first-of-type{border-top:none;padding-top:0}
+.info-row dt{color:var(--text-light);flex:1 1 auto}
+.info-row dd{color:var(--navy);font-weight:600;text-align:right;flex:0 1 auto;max-width:60%}
+.info-note{margin-top:14px;padding-top:12px;border-top:1px solid #efece4;font-size:.78rem;color:var(--text-light);line-height:1.55}
+
+/* ============ CONTACTGEGEVENS ============ */
+.contact-details{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:0 auto 36px}
+.contact-item{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 28px;min-width:210px;text-align:center}
+.contact-item__label{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:7px}
+.contact-item__value{font-size:.9rem;color:var(--navy);font-weight:600;line-height:1.55}
+.footer__contact{margin-top:16px;font-size:.85rem;line-height:1.7}
+.footer__contact a:hover{color:var(--gold)}
+
+@media(max-width:1024px){
+  .info__grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .info__grid{grid-template-columns:1fr}
+  .info-row{flex-direction:column;align-items:flex-start;gap:1px;padding:9px 0}
+  .info-row dd{text-align:left;max-width:100%}
+  .contact-item{width:100%;min-width:0}
+  .contact-details{gap:12px;margin-bottom:28px}
+}
+
 /* ============ DEMO BANNER ============ */
 .demo-banner{position:fixed;top:0;left:0;right:0;z-index:10000;background:#002B4C;color:#ffffff;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;letter-spacing:.3px;line-height:1.4}
 .demo-banner a{color:#29ABE2;text-decoration:underline;font-weight:600}
@@ -196,6 +227,7 @@ body{padding-top:36px}
   <ul class="topbar__nav">
     <li><a href="#about">Over ons</a></li>
     <li><a href="#facilities">Faciliteiten</a></li>
+    <li><a href="#info">Informatie</a></li>
     <li><a href="#routes">Omgeving</a></li>
     <li><a href="#dining">Restaurant</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -210,8 +242,8 @@ body{padding-top:36px}
   <div class="hero__overlay"></div>
   <div class="hero__inner">
     <div class="hero__stars">&#9733; &#9733; &#9733; &#9733;</div>
-    <h1 class="hero__title">Horizon Hotel<span>Comfort &amp; elegantie in het hart van Nederland</span></h1>
-    <p class="hero__text">Waar moderne luxe en natuurlijke schoonheid samenkomen. Ontdek een verblijf dat u niet snel vergeet.</p>
+    <h1 class="hero__title">Horizon Hotel<span>Comfort &amp; elegantie aan de duinrand van Bloemendaal</span></h1>
+    <p class="hero__text">Zeeweg 712, op vijf minuten fietsen van het strand van Bloemendaal aan Zee en op een kwartier van Haarlem.</p>
     <div class="hero__actions">
       <a href="https://app.mews-demo.com/distributor/b2d3796c-0cbf-4abf-bc70-b3a2009f1198" target="_blank" rel="noopener" class="btn btn--primary mews-distributor-open" id="heroBook">Bekijk Kamers &amp; Tarieven</a>
     </div>
@@ -226,7 +258,7 @@ body{padding-top:36px}
       <div>
         <p class="sec-overline">Welkom</p>
         <h2 class="sec-title">Uw thuis ver van huis</h2>
-        <p class="sec-text">Horizon Hotel combineert hedendaags comfort met warme gastvrijheid. Gelegen te midden van de mooiste natuur van Nederland, bieden wij de ideale uitvalsbasis voor zowel zakelijke reizigers als vakantiegangers. Elk detail is ontworpen met uw welzijn in gedachten.</p>
+        <p class="sec-text">Horizon Hotel combineert hedendaags comfort met warme gastvrijheid. Wij liggen aan de Zeeweg in Bloemendaal, tussen de duinen en de zee, met Haarlem op een kwartier rijden en Schiphol op ongeveer dertig minuten. De receptie is 24 uur per dag bemand, zeven dagen per week.</p>
         <div class="about__stats">
           <div class="about__stat"><div class="about__stat-num">96%</div><div class="about__stat-label">Tevreden gasten</div></div>
           <div class="about__stat"><div class="about__stat-num">42</div><div class="about__stat-label">Kamers &amp; Suites</div></div>
@@ -247,16 +279,157 @@ body{padding-top:36px}
   <div class="wrap">
     <p class="sec-overline">Faciliteiten</p>
     <h2 class="sec-title">Alles voor een zorgeloos verblijf</h2>
-    <p class="sec-text">Van een verfrissende duik in het zwembad tot handige parkeermogelijkheden direct bij de deur.</p>
+    <p class="sec-text">Van het verwarmde buitenzwembad tot de wellness en de fietsen voor de deur. Alle tijden en tarieven vindt u verderop bij <a href="#info" style="color:var(--blue);font-weight:600">praktische informatie</a>.</p>
     <div class="facilities__grid">
-      <div class="fac-card"><div class="fac-card__icon">&#127946;</div><div class="fac-card__title">Zwembad</div><div class="fac-card__text">Verwarmd binnenzwembad, dagelijks geopend voor alle hotelgasten.</div></div>
-      <div class="fac-card"><div class="fac-card__icon">&#127860;</div><div class="fac-card__title">Ontbijt</div><div class="fac-card__text">Uitgebreid buffet met verse, lokale producten om uw dag goed te starten.</div></div>
-      <div class="fac-card"><div class="fac-card__icon">&#128663;</div><div class="fac-card__title">Parkeren</div><div class="fac-card__text">Ruime, beveiligde parkeerplaats direct bij het hotel.</div></div>
-      <div class="fac-card"><div class="fac-card__icon">&#128652;</div><div class="fac-card__title">Transfer Service</div><div class="fac-card__text">Luchthaven- en stationsvervoer op aanvraag beschikbaar.</div></div>
-      <div class="fac-card"><div class="fac-card__icon">&#128694;</div><div class="fac-card__title">Wandelpaden</div><div class="fac-card__text">Prachtige wandelroutes starten direct vanuit het hotel.</div></div>
-      <div class="fac-card"><div class="fac-card__icon">&#128246;</div><div class="fac-card__text">Snel en betrouwbaar draadloos internet in het gehele hotel.</div><div class="fac-card__title">Gratis WiFi</div></div>
-      <div class="fac-card"><div class="fac-card__icon">&#128718;</div><div class="fac-card__title">Receptie 24/7</div><div class="fac-card__text">Ons team staat dag en nacht voor u klaar.</div></div>
-      <div class="fac-card"><div class="fac-card__icon">&#128690;</div><div class="fac-card__title">Fietsverhuur</div><div class="fac-card__text">Huur een fiets en ontdek de omgeving op eigen tempo.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#127946;</div><div class="fac-card__title">Buitenzwembad</div><div class="fac-card__text">Verwarmd buitenzwembad, van 1 mei tot en met 30 september open van 08:00 tot 20:00. Het zonneterras is het hele jaar open.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128726;</div><div class="fac-card__title">Wellness</div><div class="fac-card__text">Sauna, stoombad en buitenbad, dagelijks van 10:00 tot 21:00. Gratis voor hotelgasten, tijdslot via de receptie.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#127860;</div><div class="fac-card__title">Ontbijt</div><div class="fac-card__text">Buffet met verse producten. Maandag tot en met vrijdag 07:00 tot 10:30, zaterdag en zondag 07:30 tot 11:00.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#127869;</div><div class="fac-card__title">Roomservice</div><div class="fac-card__text">Dagelijks van 07:00 tot 22:30 op de kamer, met &euro; 5,00 bezorgkosten per bestelling.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128663;</div><div class="fac-card__title">Parkeren</div><div class="fac-card__text">Eigen parkeerterrein, &euro; 15,50 per nacht per auto. Reserveren is verplicht, de plaatsen zijn beperkt.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128267;</div><div class="fac-card__title">Laadpalen</div><div class="fac-card__text">Vier laadpunten op het terrein, niet te reserveren. U laadt met uw eigen laadpas.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128652;</div><div class="fac-card__title">Transfer Schiphol</div><div class="fac-card__text">Rechtstreekse transfer naar Schiphol, ongeveer 30 minuten, &euro; 75,00 per rit voor maximaal 4 personen.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128690;</div><div class="fac-card__title">Fietsverhuur</div><div class="fac-card__text">Dagelijks van 08:00 tot 18:00. Stadsfiets &euro; 15,00 per dag, e-bike &euro; 29,00 per dag.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128694;</div><div class="fac-card__title">Duinen &amp; strand</div><div class="fac-card__text">Wandelroutes door de duinen starten bij het hotel. Bloemendaal aan Zee is vijf minuten fietsen.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128246;</div><div class="fac-card__title">Gratis WiFi</div><div class="fac-card__text">Netwerk Horizon Guest, in het hele hotel en zonder wachtwoord.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128718;</div><div class="fac-card__title">Receptie 24/7</div><div class="fac-card__text">Ons team staat dag en nacht voor u klaar. Bagage bewaren voor of na uw verblijf is gratis.</div></div>
+      <div class="fac-card"><div class="fac-card__icon">&#128021;</div><div class="fac-card__title">Huisdieren welkom</div><div class="fac-card__text">Honden mogen mee voor &euro; 15,00 per nacht. Graag doorgeven bij het boeken.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= PRAKTISCHE INFORMATIE ======= -->
+<section class="info" id="info">
+  <div class="wrap">
+    <p class="sec-overline">Goed om te weten</p>
+    <h2 class="sec-title">Praktische informatie</h2>
+    <p class="sec-text">Alle tijden, tarieven en afspraken op een rij. Staat uw vraag er niet bij? De receptie is 24 uur per dag bereikbaar op <a href="tel:+31235550123" style="color:var(--blue);font-weight:600">+31 23 555 0123</a>.</p>
+    <div class="info__grid">
+
+      <div class="info-card">
+        <h3><i>&#128197;</i> Aankomst &amp; vertrek</h3>
+        <dl>
+          <div class="info-row"><dt>Check-in</dt><dd>vanaf 15:00</dd></div>
+          <div class="info-row"><dt>Check-out</dt><dd>tot 11:00</dd></div>
+          <div class="info-row"><dt>Vroege check-in vanaf 12:00</dt><dd>&euro; 25,00</dd></div>
+          <div class="info-row"><dt>Late check-out tot 14:00</dt><dd>&euro; 35,00</dd></div>
+          <div class="info-row"><dt>Late check-out tot 16:00</dt><dd>&euro; 55,00</dd></div>
+          <div class="info-row"><dt>Receptie</dt><dd>24 uur per dag</dd></div>
+          <div class="info-row"><dt>Bagage bewaren</dt><dd>gratis</dd></div>
+        </dl>
+        <p class="info-note">Vroege check-in en late check-out zijn afhankelijk van beschikbaarheid. Vraag het bij de receptie.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#127860;</i> Ontbijt</h3>
+        <dl>
+          <div class="info-row"><dt>Maandag tot en met vrijdag</dt><dd>07:00 tot 10:30</dd></div>
+          <div class="info-row"><dt>Zaterdag en zondag</dt><dd>07:30 tot 11:00</dd></div>
+          <div class="info-row"><dt>Per persoon</dt><dd>&euro; 21,50</dd></div>
+          <div class="info-row"><dt>Kinderen van 4 tot en met 12 jaar</dt><dd>&euro; 10,75</dd></div>
+          <div class="info-row"><dt>Ontbijt op de kamer</dt><dd>&euro; 27,50 p.p.</dd></div>
+        </dl>
+        <p class="info-note">Reserveren voor het ontbijt is niet nodig. Kinderen tot 4 jaar ontbijten gratis mee.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#127869;</i> Restaurant, bar &amp; roomservice</h3>
+        <dl>
+          <div class="info-row"><dt>Lunch</dt><dd>12:00 tot 14:30</dd></div>
+          <div class="info-row"><dt>Diner, keuken open</dt><dd>17:30 tot 22:00</dd></div>
+          <div class="info-row"><dt>Bar</dt><dd>11:00 tot 00:00</dd></div>
+          <div class="info-row"><dt>Bar vrijdag en zaterdag</dt><dd>tot 01:00</dd></div>
+          <div class="info-row"><dt>Kleine kaart in de bar</dt><dd>tot 22:00</dd></div>
+          <div class="info-row"><dt>Roomservice</dt><dd>07:00 tot 22:30</dd></div>
+          <div class="info-row"><dt>Bezorgkosten roomservice</dt><dd>&euro; 5,00</dd></div>
+        </dl>
+        <p class="info-note">Voor het diner raden wij aan te reserveren, zeker in het weekend.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#127946;</i> Zwembad &amp; wellness</h3>
+        <dl>
+          <div class="info-row"><dt>Verwarmd buitenzwembad</dt><dd>1 mei tot en met 30 september</dd></div>
+          <div class="info-row"><dt>Openingstijden zwembad</dt><dd>08:00 tot 20:00</dd></div>
+          <div class="info-row"><dt>Zonneterras</dt><dd>hele jaar open</dd></div>
+          <div class="info-row"><dt>Wellness: sauna, stoombad, buitenbad</dt><dd>10:00 tot 21:00</dd></div>
+          <div class="info-row"><dt>Wellness voor hotelgasten</dt><dd>gratis</dd></div>
+          <div class="info-row"><dt>Massage van 60 minuten</dt><dd>&euro; 85,00</dd></div>
+        </dl>
+        <p class="info-note">Voor de wellness reserveert u een tijdslot bij de receptie. Een massage boekt u het liefst een dag vooruit.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#128663;</i> Parkeren &amp; vervoer</h3>
+        <dl>
+          <div class="info-row"><dt>Parkeren per auto per nacht</dt><dd>&euro; 15,50</dd></div>
+          <div class="info-row"><dt>Parkeerplaats reserveren</dt><dd>verplicht</dd></div>
+          <div class="info-row"><dt>Laadpalen op het terrein</dt><dd>4 stuks</dd></div>
+          <div class="info-row"><dt>Transfer naar Schiphol</dt><dd>&euro; 75,00 per rit</dd></div>
+          <div class="info-row"><dt>Reistijd naar Schiphol</dt><dd>ongeveer 30 minuten</dd></div>
+          <div class="info-row"><dt>Taxi naar Schiphol</dt><dd>ongeveer &euro; 80,00</dd></div>
+          <div class="info-row"><dt>Taxi naar centrum Haarlem</dt><dd>ongeveer &euro; 25,00</dd></div>
+          <div class="info-row"><dt>Bushalte Bloemendaal Zeeweg</dt><dd>3 minuten lopen</dd></div>
+          <div class="info-row"><dt>Bus naar Station Haarlem</dt><dd>ongeveer 20 minuten</dd></div>
+        </dl>
+        <p class="info-note">De transfer is voor maximaal 4 personen per rit. Laadpalen zijn niet te reserveren, u laadt met uw eigen laadpas. Actuele bustijden staan in de 9292-app.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#128719;</i> Op uw kamer</h3>
+        <dl>
+          <div class="info-row"><dt>WiFi-netwerk</dt><dd>Horizon Guest</dd></div>
+          <div class="info-row"><dt>Wachtwoord WiFi</dt><dd>niet nodig</dd></div>
+          <div class="info-row"><dt>Koffie en thee</dt><dd>Nespresso en waterkoker</dd></div>
+          <div class="info-row"><dt>Kluis</dt><dd>eigen 4-cijferige code</dd></div>
+          <div class="info-row"><dt>Televisie</dt><dd>smart-tv met Chromecast</dd></div>
+          <div class="info-row"><dt>Verder</dt><dd>f&ouml;hn en airco</dd></div>
+        </dl>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#128690;</i> Fiets, strand &amp; omgeving</h3>
+        <dl>
+          <div class="info-row"><dt>Fietsverhuur</dt><dd>08:00 tot 18:00</dd></div>
+          <div class="info-row"><dt>Stadsfiets per dag</dt><dd>&euro; 15,00</dd></div>
+          <div class="info-row"><dt>E-bike per dag</dt><dd>&euro; 29,00</dd></div>
+          <div class="info-row"><dt>Bloemendaal aan Zee</dt><dd>ongeveer 5 minuten fietsen</dd></div>
+          <div class="info-row"><dt>Zandvoort</dt><dd>ongeveer 20 minuten fietsen</dd></div>
+        </dl>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#128188;</i> Services &amp; zalen</h3>
+        <dl>
+          <div class="info-row"><dt>Wasservice, zak inleveren</dt><dd>voor 09:00</dd></div>
+          <div class="info-row"><dt>Was terug op de kamer</dt><dd>voor 19:00</dd></div>
+          <div class="info-row"><dt>Babysitservice per uur</dt><dd>&euro; 17,50</dd></div>
+          <div class="info-row"><dt>Babysit aanvragen</dt><dd>24 uur vooraf</dd></div>
+          <div class="info-row"><dt>Vergaderzalen</dt><dd>3 zalen, 4 tot 40 personen</dd></div>
+        </dl>
+        <p class="info-note">Voor een vergadering of besloten bijeenkomst maakt de receptie graag een voorstel op maat.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#127881;</i> Verrassingen op de kamer</h3>
+        <dl>
+          <div class="info-row"><dt>Bloemen</dt><dd>&euro; 35,00</dd></div>
+          <div class="info-row"><dt>Verjaardagsdecoratie</dt><dd>&euro; 45,00</dd></div>
+          <div class="info-row"><dt>Champagne met bonbons</dt><dd>&euro; 55,00</dd></div>
+          <div class="info-row"><dt>Ontbijt op de kamer</dt><dd>&euro; 27,50 p.p.</dd></div>
+        </dl>
+        <p class="info-note">Geef uw wens door bij het boeken of bij aankomst, dan staat het klaar op de kamer.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i>&#128221;</i> Huisregels</h3>
+        <dl>
+          <div class="info-row"><dt>Het hotel</dt><dd>volledig rookvrij</dd></div>
+          <div class="info-row"><dt>Roken kan</dt><dd>op het terras bij de ingang</dd></div>
+          <div class="info-row"><dt>Roken op de kamer</dt><dd>&euro; 150,00 reinigingskosten</dd></div>
+          <div class="info-row"><dt>Honden per nacht</dt><dd>&euro; 15,00</dd></div>
+        </dl>
+      </div>
+
     </div>
   </div>
 </section>
@@ -266,7 +439,7 @@ body{padding-top:36px}
   <div class="wrap">
     <p class="sec-overline">Ontdek de omgeving</p>
     <h2 class="sec-title">Fietsroutes vanuit het hotel</h2>
-    <p class="sec-text">Nederland op zijn mooist. Kies een route en verken de prachtige natuur rondom het hotel.</p>
+    <p class="sec-text">Vanaf het hotel fietst u in vijf minuten naar het strand van Bloemendaal aan Zee en in ongeveer twintig minuten naar Zandvoort. Wilt u verder weg? Hieronder staat een selectie van mooie routes door heel Nederland.</p>
     <div class="routes__grid">
       <div class="r-card"><div class="r-card__img"><img src="https://res.cloudinary.com/laad-media-b-v/image/upload/v1526547090/bikingroutes/gravenlandsebuitenplaatsen.jpg" alt="'s-Gravelandse buitenplaatsen"><span class="r-card__km">37.1 km</span></div><div class="r-card__body"><div class="r-card__name">'s-Gravelandse buitenplaatsen</div><div class="r-card__meta">&#9201; 3u 52m &nbsp; &#9925; Gemiddeld<br>&#128205; 's-Graveland, Laren, Hilversum</div><a href="https://horizonhotel.guestinfo.com/NL" class="r-card__btn">Bekijk route</a></div></div>
       <div class="r-card"><div class="r-card__img"><img src="https://res.cloudinary.com/laad-media-b-v/image/upload/v1629817119/bikingroutes/AckerdijksePlassenenBroekpolder-fotograaf-ReneKoster-Natuurmonumenten.jpg" alt="Ackerdijkse Plassen"><span class="r-card__km">65.6 km</span></div><div class="r-card__body"><div class="r-card__name">Ackerdijkse Plassen en Broekpolder</div><div class="r-card__meta">&#9201; 4u 5m &nbsp; &#127783; Moeilijk<br>&#128205; Rotterdam, Vlaardingen</div><a href="https://horizonhotel.guestinfo.com/NL" class="r-card__btn">Bekijk route</a></div></div>
@@ -292,9 +465,9 @@ body{padding-top:36px}
       <span class="dining__tab">In de buurt</span>
     </div>
     <div class="dining__grid">
-      <div class="d-card"><div class="d-card__img"><img src="https://d30ilqdabtcdbe.cloudfront.net/companies/newtest/main/content/images/ce771300-8e99-43e9-8445-4378fa6cfb5f/versions/1-1.jpeg" alt="Ontbijt"></div><div class="d-card__body"><div class="d-card__name">Ontbijt</div><div class="d-card__sub">Begin uw dag goed met ons uitgebreide ontbijtbuffet, dagelijks geserveerd van 07:00 tot 10:30.</div></div></div>
-      <div class="d-card"><div class="d-card__img"><img src="https://d30ilqdabtcdbe.cloudfront.net/companies/newtest/main/content/images/2bf0175c-4edb-4657-abbe-097f0466ec32/versions/1-1.jpeg" alt="Lunchen"></div><div class="d-card__body"><div class="d-card__name">Lunchen</div><div class="d-card__sub">Gezellig lunchen in ons restaurant met een wisselend menu van verse, seizoensgebonden gerechten.</div></div></div>
-      <div class="d-card"><div class="d-card__img"><img src="https://d30ilqdabtcdbe.cloudfront.net/companies/newtest/main/content/images/82eb04a4-e901-4cf5-b07b-c6f3ff00adb8/versions/1-1.jpeg" alt="Ons restaurant"></div><div class="d-card__body"><div class="d-card__name">Ons Restaurant</div><div class="d-card__sub">Geniet van onze heerlijke gerechten in een warme, sfeervolle omgeving met uitzicht op de tuin.</div></div></div>
+      <div class="d-card"><div class="d-card__img"><img src="https://d30ilqdabtcdbe.cloudfront.net/companies/newtest/main/content/images/ce771300-8e99-43e9-8445-4378fa6cfb5f/versions/1-1.jpeg" alt="Ontbijt"></div><div class="d-card__body"><div class="d-card__name">Ontbijt</div><div class="d-card__sub">Uitgebreid ontbijtbuffet, doordeweeks van 07:00 tot 10:30 en in het weekend van 07:30 tot 11:00. &euro; 21,50 per persoon.</div></div></div>
+      <div class="d-card"><div class="d-card__img"><img src="https://d30ilqdabtcdbe.cloudfront.net/companies/newtest/main/content/images/2bf0175c-4edb-4657-abbe-097f0466ec32/versions/1-1.jpeg" alt="Lunchen"></div><div class="d-card__body"><div class="d-card__name">Lunchen</div><div class="d-card__sub">Dagelijks van 12:00 tot 14:30 in ons restaurant, met een wisselend menu van verse, seizoensgebonden gerechten.</div></div></div>
+      <div class="d-card"><div class="d-card__img"><img src="https://d30ilqdabtcdbe.cloudfront.net/companies/newtest/main/content/images/82eb04a4-e901-4cf5-b07b-c6f3ff00adb8/versions/1-1.jpeg" alt="Ons restaurant"></div><div class="d-card__body"><div class="d-card__name">Ons Restaurant</div><div class="d-card__sub">De keuken is open van 17:30 tot 22:00, met uitzicht op de tuin. Reserveren wordt aangeraden. De bar is open tot 00:00, op vrijdag en zaterdag tot 01:00.</div></div></div>
       <div class="d-card"><div class="d-card__img"><img src="https://media-cdn.tripadvisor.com/media/photo-s/2d/a3/2a/32/sfeer.jpg" alt="DeDAKKAS"></div><div class="d-card__body"><div class="d-card__name">DeDAKKAS</div><div class="d-card__sub">Rooftop Bar &amp; Restaurant in een kas met groot terras en fantastisch uitzicht over Haarlem.</div></div></div>
       <div class="d-card"><div class="d-card__img"><img src="https://media-cdn.tripadvisor.com/media/photo-p/14/f2/fc/de/photo7jpg.jpg" alt="Ramen Brothers"></div><div class="d-card__body"><div class="d-card__name">Ramen Brothers</div><div class="d-card__sub">Authentieke Japanse ramen met een originele twist. Seizoensmenu met voor ieder wat wils.</div></div></div>
       <div class="d-card"><div class="d-card__img"><img src="https://media-cdn.tripadvisor.com/media/photo-s/16/62/44/45/interieur-en-bar.jpg" alt="Spaarne66"></div><div class="d-card__body"><div class="d-card__name">Spaarne66</div><div class="d-card__sub">Modern Europese keuken aan het Spaarne in Haarlem. Stijlvol interieur met uitzicht op het water.</div></div></div>
@@ -337,9 +510,23 @@ body{padding-top:36px}
 <!-- ======= FEEDBACK ======= -->
 <section id="contact">
   <div class="wrap">
-    <p class="sec-overline">Contact</p>
+    <p class="sec-overline" style="text-align:center">Contact</p>
     <h2 class="sec-title" style="text-align:center">Neem contact met ons op</h2>
-    <p class="sec-text" style="text-align:center;margin-left:auto;margin-right:auto">Ontdek wat GuestCompass voor jouw accommodatie kan.</p>
+    <p class="sec-text" style="text-align:center;margin-left:auto;margin-right:auto">De receptie is 24 uur per dag bereikbaar, zeven dagen per week.</p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="contact-item__label">Adres</div>
+        <div class="contact-item__value">Zeeweg 712<br>2041 MR Bloemendaal</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item__label">Telefoon</div>
+        <div class="contact-item__value"><a href="tel:+31235550123">+31 23 555 0123</a><br>24 uur per dag</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item__label">E-mail</div>
+        <div class="contact-item__value"><a href="mailto:receptie@horizonhotel.nl">receptie@horizonhotel.nl</a><br>Reactie binnen 24 uur</div>
+      </div>
+    </div>
     <div class="feedback__box" style="max-width:640px;padding:0;overflow:hidden;background:transparent;box-shadow:none">
       <iframe
         id="JotFormIFrame-260533074814050"
@@ -362,13 +549,20 @@ body{padding-top:36px}
   <div class="footer__inner">
     <div>
       <div class="footer__brand">Horizon Hotel</div>
-      <p class="footer__brand-text">Comfort en elegantie in het hart van Nederland. Wij kijken ernaar uit u te mogen verwelkomen.</p>
+      <p class="footer__brand-text">Comfort en elegantie aan de duinrand van Bloemendaal. Wij kijken ernaar uit u te mogen verwelkomen.</p>
+      <div class="footer__contact">
+        Zeeweg 712, 2041 MR Bloemendaal<br>
+        <a href="tel:+31235550123">+31 23 555 0123</a><br>
+        <a href="mailto:receptie@horizonhotel.nl">receptie@horizonhotel.nl</a><br>
+        Receptie 24 uur per dag bereikbaar
+      </div>
     </div>
     <div>
       <h4>Hotel</h4>
       <ul>
         <li><a href="#about">Over ons</a></li>
         <li><a href="#facilities">Faciliteiten</a></li>
+        <li><a href="#info">Praktische informatie</a></li>
         <li><a href="#dining">Restaurant</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -407,4 +601,3 @@ body{padding-top:36px}
 <!-- End GuestCompass AI Widget -->
 </body>
 </html>
-
